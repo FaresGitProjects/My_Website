@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/styles.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/fontello.css') }}" />
+    <link rel="stylesheet" href="..\static\styles\styles.css" />
+    <script type="text/javascript" src="static\JS/JQuery.js"></script>
+    <script src="{{url_for('static', filename='JS/JQuery.js')}}"></script>
+    <title>Fares Mohamed</title>
+  </head>
+
+  <body>
+    <div class="nav-header">
+      <img id="pic-of-me" src="static\imgs\Profile-Pic-Cropped.jpg" alt="Placeholder-Pic" />
+      <nav>
+        <ul>
+          <li>
+            <a id="abt-button"> <i class="icon-coffee-date"></i> About Me </a>
+          </li>
+          <li>
+            <a id="res-button"> <i class="icon-Resume"></i> R&eacute;sum&eacute; </a>
+          </li>
+          <li>
+            <a id="prj-button"> <i class="icon-gears"></i> Projects </a>
+          </li>
+          <li>
+            <a id="ctc-button"><i class="icon-email"></i> Contact </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+        <div id="contact-body" class="body-container">
+        <article>
+            <header>
+                <h1>Contact</h1>
+                <h3>contact.fares.mohamed@gmail.com</h3>
+            </header>
+            <div class="hr-div">
+                <hr />
+                <hr />
+                <hr />
+            </div>
+            <h2>I'd love to hear from you!</h2>
+
+            <form class="contact-form" id="contact-form">
+                <div class="nm-em-line">
+                    <input name="nmbox" id="name-box" cols="40" rows="1" placeholder="Name">
+                    <input name="embox" id="email-box" cols="40" rows="1" placeholder="Email">
+                </div>
+                <input name="sbjbox" id="subject-box" cols="40" rows="1" placeholder="Subject">
+                <textarea name="msgbox" id="message-box" cols="40" rows="20" placeholder="Message"></textarea>
+
+                <button type="button" onclick="getData()" > Submit Form </button>
+            </form>
+        </article>
+    </div>
+
+
+
+    <div id="project-body" class="body-container">
+      <article>
+          <header>
+              <h1>Projects</h1>
+              <h3>My Tinkering</h3>
+          </header>
+          <div class="hr-div">
+              <hr />
+              <hr />
+              <hr />
+          </div>
+          <h2></h2>
+          <div class="timeline">
+
+            <div class="timeline-moment">
+                <div class="moment-title">
+                    <span class="moment-date">August 2022 - October 2022</span>
+                    <div class="moment-job">CLAT</div>
+                </div>
+                <div class="moment-description">
+                    Preproduction command-line web scraper for market research
+                </div>
+            </div>
+
+            <div class="timeline-moment">
+                <div class="moment-title">
+                    <span class="moment-date">January 2022 - June 2022</span>
+                    <div class="moment-job">Shout-Box Chat App</div>
+                </div>
+                <div class="moment-description">
+                  Social media site that utilized full tech stack of Python, JavaScript, HTML/CSS and MySQL
+                </div>
+            </div>
+
+            <div class="timeline-moment">
+              <div class="moment-title">
+                  <span class="moment-date">January 2022 - June 2022</span>
+                  <div class="moment-job">Command Line Messaging in C++</div>
+              </div>
+              <div class="moment-description">
+                C++ networking class assignment whereby participants can log in to a server and message each other
+                in a room of up to 5 people
+              </div>
+            </div>
+
+            <div class="timeline-moment">
+                <div class="moment-title">
+                    <span class="moment-date">September 2021 - November 2021</span>
+                    <div class="moment-job">Government-Type Simulator</div>
+                </div>
+                <div class="moment-description">
+                    Small-scale simulator of tripartite, republic-style government that measured how quickly
+                    a bill could get garner approval and get passed into law
+                </div>
+            </div>
+
+            <div class="timeline-moment">
+                  <div class="moment-title">
+                      <span class="moment-date">August 2021 - December 2021</span>
+                      <div class="moment-job">8-bit Verilog Processor</div>
+                  </div>
+                  <div class="moment-description">
+                      8-bit simple processor written in verilog implementing load, store, jump and 
+                      the 4 arithmetic operations less division
+                  </div>
+              </div>
+
+              <div class="timeline-moment">
+                <div class="moment-title">
+                    <span class="moment-date">August 2021 - December 2021</span>
+                    <div class="moment-job">Simple Flow&#174;</div>
+                </div>
+                <div class="moment-description">
+                    MIPS command line program that emulated the popular mobile game Flow&#174;
+              </div>
+
+            </div>
+          </div>
+  </div>
+
+
+
+
+
+        <div id="resume-body" class="body-container">
+        <article>
+            <header>
+                <h1>R&eacute;sum&eacute;</h1>
+                <h3>My Journey</h3>
+            </header>
+            <div class="hr-div">
+                <hr />
+                <hr />
+                <hr />
+            </div>
+            <h2>Education & Experiences</h2>
+            <div class="timeline">
+
+              <div class="timeline-moment">
+                <div class="moment-title">
+                    <span class="moment-date">August 2022 - October 2022</span>
+                    <div class="moment-job">CLAT - CVS Intern</div>
+                </div>
+                <div class="moment-description">
+                    Interned with CVS Health as a project collaborator
+                    <br></br>
+                    Work on a team of 3 to create preproduction web scraper CLAT for market research
+                    <br></br>
+                    Attended team meetings and contributed ideas that ended up in the final design
+                </div>
+            </div>
+
+                <div class="timeline-moment">
+                  <div class="moment-title">
+                      <span class="moment-date">January 2022 - June 2022</span>
+                      <div class="moment-job">ShoutBox Chat App - MetaTag</div>
+                  </div>
+                  <div class="moment-description">
+                      Lead a team of 5 to create a social media site
+                      <br></br>
+                      Contributed to each layer of a full tech stack using Python, JS, HTML/CSS and MySQL
+                      <br></br>
+                      Won second place in a 22-team web-building competition
+                  </div>
+              </div>
+
+                <div class="timeline-moment">
+                    <div class="moment-title">
+                        <span class="moment-date">August 2021 - September 2022</span>
+                        <div class="moment-job">Resident Advisor</div>
+                    </div>
+                    <div class="moment-description">
+                        Supervised a coed floor of 30 residents and held fun,
+                        educational, informative and budget-friendly programs
+                        <br></br>
+                        Served an on-call duty rotation where I handled policy
+                        violations, resolved conflicts and made ample references
+                        to campus resources
+                    </div>
+                </div>
+
+                <div class="timeline-moment">
+                    <div class="moment-title">
+                        <span class="moment-date">June 2020 - September 2020</span>
+                        <div class="moment-job">Syosset Coder School</div>
+                    </div>
+                    <div class="moment-description">
+                        Educated pupils K-10 with logical and computational thinking
+                        via programming
+                        <br></br>
+                        Fostered a motivating and inspiring enviornment centered
+                        around a growth-mindset
+                        <br></br>
+                        Designed lesson plans, established rapport and monitored
+                        progress as students completed projects
+                    </div>
+                </div>
+                
+                <div class="timeline-moment">
+                    <div class="moment-title">
+                        <span class="moment-date">August 2018 - May 2022</span>
+                        <div class="moment-job">Univeristy at Buffalo</div>
+                    </div>
+                    <div class="moment-description">
+                        My alma mater, the school that gave me the oppurtunity, mentorship
+                        and resources to develop and hone my budding skills as a young
+                        programmer. UB's curriculum taught me not only how to code, but
+                        more importantly, how to learn. While COVID-19 posed a great and taxing
+                        challenge to my academic pursuit, I nonetheless overcame and
+                        matured as a result through the challenges of both my education 
+                        and the adversity to it.
+                    </div>
+                </div>
+            </div>
+            <div class="hr-div">
+                <hr />
+                <hr />
+                <hr />
+            </div>
+            <h2 class="ST-title">Skills & Traits</h2>
+
+            <div class="skills-assets">
+                <div class="skills">
+                    <ul>
+                        <li>Java</li>
+                        <li>C/C++</li>
+                        <li>Python</li>
+                        <li>HTML/CSS</li>
+                        <li>JavaScript</li>
+                        <li>MySQL</li>
+                        <li>VSCode</li>
+                        <li>Visual Studio</li>
+                        <li>MIPS Assembly</li>
+                        <li>Git/Github</li>
+                        <li>Unix/Linux</li>
+                        <li>g++</li>
+                    </ul>
+                </div>
+                <div class="traits">
+                    <ul>
+                        <li>Communication</li>
+                        <li>Collaboration</li>
+                        <li>Leadership</li>
+                        <li>Flexibility</li>
+                        <li>Approachability</li>
+                        <li>Emotional Intelligence</li>
+                        <li>Conflict Resolution</li>
+                        <li>Industrious</li>
+                        <li>Funny (but, like, actually)</li>
+                        <li>Inquisitive</li>
+                        <li>Creativity</li>
+                        <li>Diligence</li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+        <div class="resume-link">
+            <a href="static\Fares_Mohamed_Resume.pdf" target="_blank">View Full Resume</a>     
+            <a href="https://github.com/FaresGitProjects" target="_blank">GitHub</a>     
+            <a href="https://www.linkedin.com/in/fares-mo/" target="_blank">LinkedIn</a>
+        </div>
+    </div>
+
+
+
+    
+    <div id="about-body" class="body-container">
+      <article>
+        <header>
+          <h1>Fares Mohamed</h1>
+          <h3>Computer Science B.S</h3>
+          <h4>University at Buffalo</h4>
+        </header>
+        <div class="hr-div">
+          <hr />
+          <hr />
+          <hr />
+        </div>
+        <h2>A little bit about me!</h2>
+        <blockquote>
+          <p>
+            &ldquo;I'm a proud and recently graduated alum of the University at
+            Buffalo. Over the years, I've worked a diverse array of jobs, from
+            fiscal document processing at New York Community Bank to the
+            hustle-bustle service of a restaurant floor to teaching children how
+            to code and solve logical puzzles.
+          </p>
+          <p>
+            During my time at UB, I worked on several projects, one of which was
+            a social media shoutbox site built with a full tech stack of HTML,
+            CSS, JavaScript, Python and MySQL. Our team's website won second in
+            a 22-team web-building competition hosted by the MetaTag club.
+          </p>
+          <p>
+            Programming has been an integral outlet into which I can concetrate
+            my creative and intellectual needs. Being able to leverage my
+            problem-solving and technical abilities to manifest something new
+            and exciting is the motivation that drives my passion for
+            programming. Tis' the fuel that stirs my fire.&rdquo;
+          </p>
+        </blockquote>
+      </article>
+    </div>
+    <script src="{{url_for('static', filename='JS/main.js')}}"></script>
+  </body>
+</html>
